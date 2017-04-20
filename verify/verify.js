@@ -15,7 +15,7 @@ var productionId, productionURI, categoryURI, categoryId;
 
 describe("Test", function () {
   this.timeout(60000);
-  it("POST /productions -> 201", function (done) {
+  step("POST /productions -> 201", function (done) {
     var options = {
       url: endpoint + '/productions',
       method: 'POST',
@@ -39,7 +39,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /productions/{productionId} -> 200", function (done) {
+  step("GET /productions/{productionId} -> 200", function (done) {
     var options = {
       url: endpoint + '/productions/' + productionId,
       method: 'GET',
@@ -90,7 +90,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /productions -> 200", function (done) {
+  step("GET /productions -> 200", function (done) {
     var options = {
       url: endpoint + '/productions',
       method: 'GET',
@@ -150,7 +150,7 @@ describe("Test", function () {
     });
   });
   
-  it("PUT /productions/{productionId} -> 204", function (done) {
+  step("PUT /productions/{productionId} -> 204", function (done) {
     var options = {
       url: endpoint + '/productions/' + productionId,
       method: 'PUT',
@@ -171,7 +171,7 @@ describe("Test", function () {
     });
   });
   
-  it("DELETE /productions/{productionId} -> 204", function (done) {
+  step("DELETE /productions/{productionId} -> 204", function (done) {
     var options = {
       url: endpoint + '/productions/' + productionId,
       method: 'DELETE',
@@ -189,7 +189,7 @@ describe("Test", function () {
   });
   
   
-  it("POST /categories -> 201", function (done) {
+  step("POST /categories -> 201", function (done) {
     var options = {
       url: endpoint + '/categories',
       method: 'POST',
@@ -224,7 +224,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /categories -> 200", function (done) {
+  step("GET /categories -> 200", function (done) {
     var options = {
       url: endpoint + '/categories',
       method: 'GET',
@@ -278,7 +278,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /categories/{id} -> 200", function (done) {
+  step("GET /categories/{id} -> 200", function (done) {
     var options = {
       url: endpoint + '/categories/' + categoryId,
       method: 'GET',
@@ -322,7 +322,7 @@ describe("Test", function () {
     });
   });
   
-  it("PUT /categories/{id} -> 204", function (done) {
+  step("PUT /categories/{id} -> 204", function (done) {
     var options = {
       url: endpoint + '/categories/' + categoryId,
       method: 'PUT',
@@ -341,7 +341,7 @@ describe("Test", function () {
     });
   });
   
-  it("DELETE /categories/{id} -> 204", function (done) {
+  step("DELETE /categories/{id} -> 204", function (done) {
     var options = {
       url: endpoint + '/categories/' + categoryId,
       method: 'DELETE',
